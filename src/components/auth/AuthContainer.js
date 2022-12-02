@@ -1,11 +1,14 @@
 import React from 'react';
 import Login from './Login';
+import './AuthContainer.scss';
 
 const AuthContainer = () => {
   return (
-    <div>
-      <Login />
-    </div>
+    <section className="--flex-center --100vh">
+      <div className="container box">
+        <Login />
+      </div>
+    </section>
   );
 };
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import loginImg from '../../assets/login.svg';
+import './AuthContainer.scss';
 
 const Login = () => {
   return (
-    <div className="main --flex-center">
+    <div className="main-container --flex-center">
       <div className="img-container">
         <img src={loginImg} alt="login-img" />
       </div>
