@@ -2,7 +2,7 @@ import React from 'react';
 import loginImg from '../../assets/login.svg';
 import './AuthContainer.scss';
 
-const Login = () => {
+const Login = ({ onLogin, onReset }) => {
   return (
     <div className="main-container --flex-center">
       <div className="img-container">
@@ -18,12 +18,12 @@ const Login = () => {
             placeholder="Password"
           />
           <button className="--btn --btn-primary --btn-block">Login</button>
-          <a href="#" className="--text-sm">
+          <a href="#" className="--text-sm" onClick={onReset}>
             Forgot Password
           </a>
           <span className="--text-sm --block">
             Don't have an account?
-            <a href="#" className="--text-sm">
+            <a href="#" className="--text-sm" onClick={onLogin}>
               Register
             </a>
           </span>

@@ -1,7 +1,7 @@
 import React from 'react';
 import registerImg from '../../assets/register.svg';
 
-const Register = () => {
+const Register = ({ onRegister }) => {
   return (
     <div className="main-container --flex-center">
       <div className="form-container">
@@ -18,7 +18,7 @@ const Register = () => {
 
           <span className="--text-sm --block">
             Have an account?
-            <a href="#" className="--text-sm">
+            <a href="#" className="--text-sm" onClick={onRegister}>
               Login
             </a>
           </span>
