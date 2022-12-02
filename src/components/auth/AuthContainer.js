@@ -5,33 +5,29 @@ import Reset from './Reset';
 import './AuthContainer.scss';
 
 const AuthContainer = () => {
-  const [login, setLogin] = useState(true);
-  const [register, setRegister] = useState(false);
-  const [reset, setReset] = useState(false);
+  const [authState, setAuthState] = useState({
+    login: true,
+    register: false,
+    reset: false,
+  });
 
   const registerHandler = () => {
-    setLogin(false);
-    setRegister(true);
-    setReset(false);
+    setAuthState({ login: false, register: true, reset: false });
   };
 
   const loginHandler = () => {
-    setRegister(false);
-    setLogin(true);
-    setReset(false);
+    setAuthState({ login: true, register: false, reset: false });
   };
 
   const resetHandler = () => {
-    setLogin(false);
-    setReset(true);
-    setRegister(false);
+    setAuthState({ login: false, register: false, reset: true });
   };
 
   const cancelHandler = () => {
-    setReset(false);
-    setLogin(true);
-    setRegister(false);
+    setAuthState({ login: true, register: false, reset: false });
   };
+
+  const { login, register, reset } = authState;
   return (
     <section className="--flex-center --100vh">
       <div className="container box">
