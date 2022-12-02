@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from './Login';
 import Register from './Register';
+import Reset from './Reset';
 import './AuthContainer.scss';
 
 const AuthContainer = () => {
@@ -8,7 +9,8 @@ const AuthContainer = () => {
     <section className="--flex-center --100vh">
       <div className="container box">
         {/* <Login /> */}
-        <Register />
+        {/* <Register /> */}
+        <Reset />
       </div>
     </section>
   );
